@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magic by Luke</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Magic by Luke</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Welcome!</h2>
+      <p>Step into a world of mystery and wonder with the incredible young magician... Luke!</p>
+      <button onclick="revealMagic()">Reveal a Trick</button>
+      <p id="magic-trick"></p>
+    </section>
+    <div class="card-container">
+      <div class="magic-card">
+        <div class="card-front">Pick a Card</div>
+        <div class="card-back">Ace of Spades!</div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Magic by Luke</p>
+  </footer>
+  <script>
+    function revealMagic() {
+      const tricks = ["The card has vanished!", "Watch closely... it's gone!", "Now you see it, now you don't!"];
+      const trick = tricks[Math.floor(Math.random() * tricks.length)];
+      document.getElementById("magic-trick").innerText = trick;
+    }
+  </script>
+</body>
+</html>
