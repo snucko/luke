@@ -33,11 +33,20 @@
   <footer>
     <p>&copy; 2025 Magic by Luke</p>
   </footer>
+  <audio autoplay loop>
+    <source src="audio/magic-theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
   <script>
     function revealMagic() {
       const tricks = ["The card has vanished!", "Watch closely... it's gone!", "Now you see it, now you don't!"];
       const trick = tricks[Math.floor(Math.random() * tricks.length)];
-      document.getElementById("magic-trick").innerText = trick;
+      const trickElement = document.getElementById("magic-trick");
+      trickElement.innerText = trick;
+      trickElement.style.opacity = 0;
+      setTimeout(() => {
+        trickElement.style.opacity = 1;
+      }, 100);
     }
   </script>
 </body>
