@@ -3,28 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Luke</title>
+  <meta name="description" content="Learn about Luke, a professional magician specializing in illusions and sleight of hand. Entertaining audiences since age 13.">
+  <title>About - Magic by Luke</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <luke-header></luke-header>
+  
   <main>
-    <section>
-      <h2>About Luke</h2>
-      <p>Luke is a young magician with a love for sleight of hand. His card and coin tricks leave audiences amazed, entertained, and wondering how it was done. He's been perfecting his magic since age 13, and he's just getting started.</p>
+    <section class="page-hero">
+      <h1>About Luke</h1>
+      <p>Professional magician dedicated to creating unforgettable moments</p>
+    </section>
+
+    <section class="about-content">
+      <div class="about-text">
+        <h2>The Journey</h2>
+        <p>Luke discovered his passion for magic at age 13 when he received his first magic kit. What started as a hobby quickly became a passion. With years of dedicated practice, he has perfected the art of illusions, sleight of hand, and audience engagement.</p>
+        
+        <h2>What Sets Luke Apart</h2>
+        <ul class="feature-list">
+          <li>✨ <strong>Professional Training:</strong> Years of practice and performance experience</li>
+          <li>👥 <strong>Audience First:</strong> Every performance is tailored to captivate your specific audience</li>
+          <li>🎭 <strong>Versatile Repertoire:</strong> Card tricks, coin illusions, stage magic, and much more</li>
+          <li>🤝 <strong>Reliable Professional:</strong> Always punctual, well-prepared, and dedicated to your event's success</li>
+        </ul>
+
+        <h2>Performance Specialties</h2>
+        <p>Luke specializes in:</p>
+        <ul class="specialty-list">
+          <li>Card Manipulation & Illusions</li>
+          <li>Coin Tricks & Sleight of Hand</li>
+          <li>Interactive Audience Participation</li>
+          <li>Stage Magic & Large Productions</li>
+          <li>Corporate Entertainment</li>
+          <li>Private Event Magic</li>
+        </ul>
+      </div>
     </section>
   </main>
+
   <luke-footer></luke-footer>
 
   <script type="module">
     import './js/components/LukeHeader.js';
     import './js/components/LukeFooter.js';
-    import AudioManager from './js/components/AudioManager.js';
-
-    window.addEventListener('load', () => {
-      const audioManager = AudioManager.getInstance();
-      audioManager.play();
-    });
   </script>
 </body>
 </html>

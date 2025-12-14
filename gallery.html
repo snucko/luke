@@ -3,32 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Luke</title>
+  <meta name="description" content="Watch Magic by Luke perform incredible illusions and tricks. Video performances and event highlights.">
+  <title>Gallery - Magic by Luke</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <luke-header></luke-header>
+  
   <main>
-    <section>
-      <h2>Gallery</h2>
-      <p>Watch Luke in action!</p>
+    <section class="page-hero">
+      <h1>Gallery</h1>
+      <p>Watch incredible performances and unforgettable moments</p>
+    </section>
+
+    <section class="gallery-content">
+      <h2>Recent Performances</h2>
       <div class="video-gallery">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+        <div class="video-item">
+          <div class="video-placeholder">
+            <span>🎬</span>
+            <p>Performance Video</p>
+          </div>
+          <p class="video-caption">Corporate Event Magic</p>
+        </div>
+        <div class="video-item">
+          <div class="video-placeholder">
+            <span>🎬</span>
+            <p>Performance Video</p>
+          </div>
+          <p class="video-caption">Birthday Party Entertainment</p>
+        </div>
+        <div class="video-item">
+          <div class="video-placeholder">
+            <span>🎬</span>
+            <p>Performance Video</p>
+          </div>
+          <p class="video-caption">Wedding Reception Magic</p>
+        </div>
+        <div class="video-item">
+          <div class="video-placeholder">
+            <span>🎬</span>
+            <p>Performance Video</p>
+          </div>
+          <p class="video-caption">Audience Favorite Tricks</p>
+        </div>
+      </div>
+
+      <div class="cta-section" style="margin-top: 3rem;">
+        <h2>Want to see Luke perform live?</h2>
+        <p>Book a performance for your next event</p>
+        <a href="contact.html" class="btn btn-primary">Request a Performance</a>
       </div>
     </section>
   </main>
+
   <luke-footer></luke-footer>
 
   <script type="module">
     import './js/components/LukeHeader.js';
     import './js/components/LukeFooter.js';
-    import AudioManager from './js/components/AudioManager.js';
-
-    window.addEventListener('load', () => {
-      const audioManager = AudioManager.getInstance();
-      audioManager.play();
-    });
   </script>
 </body>
 </html>

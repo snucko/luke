@@ -3,29 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Luke</title>
+  <meta name="description" content="Contact Magic by Luke to book a performance for your event. Professional magician available for birthdays, corporate events, and more.">
+  <title>Contact - Magic by Luke</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <luke-header></luke-header>
+  
   <main>
-    <section>
-      <h2>Contact</h2>
-      <p>Want to book a show or learn more?</p>
-      <p>Email: <a href="mailto:luke.tivnan@gmail.com">luke.tivnan@gmail.com</a></p>
+    <section class="page-hero">
+      <h1>Get in Touch</h1>
+      <p>Ready to book a magical performance? Reach out and let's make your event unforgettable.</p>
     </section>
+
+    <div class="contact-container">
+      <contact-form></contact-form>
+
+      <section class="contact-info">
+        <h2>Other Ways to Reach Us</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Email</h3>
+            <p><a href="mailto:luke.tivnan@gmail.com">luke.tivnan@gmail.com</a></p>
+          </div>
+          <div class="info-card">
+            <h3>Availability</h3>
+            <p>Weekends & Evenings<br>Full-time booking available</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
+
   <luke-footer></luke-footer>
 
   <script type="module">
     import './js/components/LukeHeader.js';
     import './js/components/LukeFooter.js';
-    import AudioManager from './js/components/AudioManager.js';
-
-    window.addEventListener('load', () => {
-      const audioManager = AudioManager.getInstance();
-      audioManager.play();
-    });
+    import './js/components/ContactForm.js';
   </script>
 </body>
 </html>
