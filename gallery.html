@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header id="header"></header>
+  <luke-header></luke-header>
   <main>
     <section>
       <h2>Gallery</h2>
@@ -18,7 +18,17 @@
       </div>
     </section>
   </main>
-  <footer id="footer"></footer>
-  <script type="module" src="js/pages/gallery.js"></script>
+  <luke-footer></luke-footer>
+
+  <script type="module">
+    import './js/components/LukeHeader.js';
+    import './js/components/LukeFooter.js';
+    import AudioManager from './js/components/AudioManager.js';
+
+    window.addEventListener('load', () => {
+      const audioManager = AudioManager.getInstance();
+      audioManager.play();
+    });
+  </script>
 </body>
 </html>
