@@ -11,7 +11,7 @@ This website showcases Luke's magic performances and services, featuring:
 - Responsive design optimized for all devices
 - Web Components architecture for maintainability
 
-**Live Site:** https://magicbyluke.com
+**Live Site:** https://luke.tivnan.org
 
 ## Recent Updates
 
@@ -280,7 +280,7 @@ Web Components require modern browser support (ES6+).
 Hosted on GitHub Pages via CNAME configuration.
 
 **Repository**: https://github.com/snucko/luke
-**Domain**: magicbyluke.com (via CNAME file)
+**Domain**: luke.tivnan.org (via CNAME file)
 
 ### Deploy Changes
 ```bash
@@ -343,7 +343,7 @@ To update content, simply edit the relevant HTML page or update `js/config.js` f
 For updates, issues, or questions:
 - **Email**: luke.tivnan@gmail.com
 - **GitHub**: https://github.com/snucko/luke
-- **Website**: https://magicbyluke.com
+- **Website**: https://luke.tivnan.org
 
 ---
 
