@@ -41,9 +41,9 @@ const CONFIG = {
     },
   ],
   socialLinks: [
-    { name: 'Instagram', url: '#', icon: '📡' },
-    { name: 'TikTok', url: '#', icon: '🎮' },
-    { name: 'YouTube', url: '#', icon: '🔮' },
+    { name: 'Instagram', url: '#', icon: '📺' },
+    { name: 'TikTok', url: '#', icon: '🎬' },
+    { name: 'YouTube', url: '#', icon: '☎️' },
   ],
 };
 
