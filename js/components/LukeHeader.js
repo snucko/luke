@@ -11,10 +11,11 @@ class LukeHeader extends LitElement {
     }
 
     header {
-      background: rgba(26, 26, 46, 0.95);
+      background: rgba(10, 10, 20, 0.98);
       backdrop-filter: blur(10px);
       padding: 1rem 2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 20px rgba(255, 0, 110, 0.2), inset 0 -1px 0 rgba(255, 0, 110, 0.1);
+      border-bottom: 1px solid rgba(255, 0, 110, 0.15);
     }
 
     .header-content {
@@ -27,8 +28,8 @@ class LukeHeader extends LitElement {
 
     h1 {
       font-size: 1.8rem;
-      color: #f9d423;
-      text-shadow: 0 0 10px rgba(249, 212, 35, 0.5);
+      color: #ff006e;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.6), 0 0 20px rgba(255, 0, 110, 0.3);
       margin: 0;
       font-weight: 700;
       letter-spacing: 1px;
@@ -50,8 +51,8 @@ class LukeHeader extends LitElement {
     }
 
     a:hover {
-      color: #f9d423;
-      text-shadow: 0 0 10px rgba(249, 212, 35, 0.5);
+      color: #ff006e;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.6);
     }
 
     a::after {
@@ -61,8 +62,9 @@ class LukeHeader extends LitElement {
       left: 0;
       width: 0;
       height: 2px;
-      background: #f9d423;
+      background: linear-gradient(90deg, #ff006e, #00d9ff);
       transition: width 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 0, 110, 0.4);
     }
 
     a:hover::after {

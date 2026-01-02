@@ -7,32 +7,35 @@ class FeatureCard extends LitElement {
     }
 
     .feature {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(249, 212, 35, 0.2);
-      border-radius: 10px;
+      background: rgba(255, 0, 110, 0.08);
+      border: 2px solid rgba(255, 0, 110, 0.3);
+      border-radius: 0px;
       padding: 2rem;
       text-align: center;
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.15), inset 0 0 15px rgba(0, 217, 255, 0.02);
     }
 
     .feature:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(249, 212, 35, 0.4);
+      background: rgba(255, 0, 110, 0.12);
+      border-color: rgba(255, 0, 110, 0.6);
       transform: translateY(-8px);
-      box-shadow: 0 12px 32px rgba(249, 212, 35, 0.15);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.4), 0 0 20px rgba(0, 217, 255, 0.2), inset 0 0 20px rgba(0, 217, 255, 0.05);
     }
 
     .icon {
       font-size: 3rem;
       margin-bottom: 1rem;
+      filter: drop-shadow(0 0 10px rgba(255, 0, 110, 0.3));
     }
 
     .title {
       font-size: 1.3rem;
-      color: #f9d423;
+      color: #ff006e;
       margin-bottom: 0.5rem;
       font-weight: 600;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.4);
     }
 
     .description {

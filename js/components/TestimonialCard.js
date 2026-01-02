@@ -7,26 +7,28 @@ class TestimonialCard extends LitElement {
     }
 
     .testimonial {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(249, 212, 35, 0.2);
-      border-radius: 10px;
+      background: rgba(255, 0, 110, 0.08);
+      border: 2px solid rgba(255, 0, 110, 0.3);
+      border-radius: 0px;
       padding: 2rem;
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.15), inset 0 0 15px rgba(0, 217, 255, 0.02);
     }
 
     .testimonial:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(249, 212, 35, 0.4);
+      background: rgba(255, 0, 110, 0.12);
+      border-color: rgba(255, 0, 110, 0.6);
       transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(249, 212, 35, 0.1);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.4), 0 0 20px rgba(0, 217, 255, 0.2), inset 0 0 20px rgba(0, 217, 255, 0.05);
     }
 
     .stars {
-      color: #f9d423;
+      color: #ff006e;
       font-size: 1.2rem;
       margin-bottom: 1rem;
       letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.4);
     }
 
     .text {
@@ -39,12 +41,13 @@ class TestimonialCard extends LitElement {
 
     .author {
       font-weight: 600;
-      color: #f9d423;
+      color: #ff006e;
       font-size: 0.95rem;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.4);
     }
 
     .event {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 217, 255, 0.7);
       font-size: 0.85rem;
     }
   `;

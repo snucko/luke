@@ -23,8 +23,8 @@ class HeroSection extends LitElement {
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 30% 50%, rgba(249, 212, 35, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 50%, rgba(100, 200, 255, 0.05) 0%, transparent 50%);
+      background: radial-gradient(circle at 30% 50%, rgba(255, 0, 110, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
       pointer-events: none;
       animation: gradient-shift 8s ease-in-out infinite;
     }
@@ -39,8 +39,8 @@ class HeroSection extends LitElement {
     h1 {
       font-size: 4rem;
       margin: 0 0 1rem 0;
-      color: #f9d423;
-      text-shadow: 0 0 20px rgba(249, 212, 35, 0.5);
+      color: #ff006e;
+      text-shadow: 0 0 20px rgba(255, 0, 110, 0.8), 0 0 40px rgba(255, 0, 110, 0.4);
       animation: fade-in-down 0.8s ease-out;
       letter-spacing: 2px;
       font-weight: 800;
@@ -75,25 +75,28 @@ class HeroSection extends LitElement {
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #f9d423 0%, #f7c722 100%);
-      color: #1a1a2e;
-      box-shadow: 0 10px 30px rgba(249, 212, 35, 0.3);
+      background: linear-gradient(135deg, #ff006e 0%, #f72585 100%);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.6), 0 10px 30px rgba(255, 0, 110, 0.3);
+      border: 1px solid rgba(255, 0, 110, 0.5);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(249, 212, 35, 0.4);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.8), 0 15px 40px rgba(255, 0, 110, 0.5);
+      border-color: rgba(255, 0, 110, 0.8);
     }
 
     .btn-secondary {
       background: transparent;
       color: #fff;
-      border: 2px solid #f9d423;
+      border: 2px solid #ff006e;
     }
 
     .btn-secondary:hover {
-      background: rgba(249, 212, 35, 0.1);
+      background: rgba(255, 0, 110, 0.15);
       transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.4);
     }
 
     .scroll-hint {
@@ -101,7 +104,7 @@ class HeroSection extends LitElement {
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
-      color: rgba(249, 212, 35, 0.5);
+      color: rgba(255, 0, 110, 0.6);
       animation: bounce 2s infinite;
     }
 
