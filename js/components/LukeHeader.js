@@ -97,7 +97,7 @@ class LukeHeader extends LitElement {
     return html`
       <header>
         <div class="header-content">
-          <h1>✨ Magic by Luke</h1>
+          <h1>◆ Magic by Luke</h1>
           <nav>
             ${CONFIG.navigation.map(item => html`
               <a href="${item.href}">${item.text}</a>

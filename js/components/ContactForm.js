@@ -11,11 +11,12 @@ class ContactForm extends LitElement {
     .form-container {
       max-width: 600px;
       margin: 2rem auto;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(249, 212, 35, 0.2);
-      border-radius: 10px;
+      background: rgba(255, 0, 110, 0.08);
+      border: 2px solid rgba(255, 0, 110, 0.3);
+      border-radius: 0px;
       padding: 2rem;
       backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.15), inset 0 0 15px rgba(0, 217, 255, 0.02);
     }
 
     form {
@@ -26,9 +27,10 @@ class ContactForm extends LitElement {
 
     label {
       display: block;
-      color: #f9d423;
+      color: #ff006e;
       margin-bottom: 0.5rem;
       font-weight: 500;
+      text-shadow: 0 0 8px rgba(255, 0, 110, 0.3);
     }
 
     input,
@@ -36,9 +38,9 @@ class ContactForm extends LitElement {
     select {
       width: 100%;
       padding: 0.75rem;
-      border: 1px solid rgba(249, 212, 35, 0.3);
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 0, 110, 0.3);
+      border-radius: 0px;
+      background: rgba(255, 0, 110, 0.05);
       color: #fff;
       font-family: inherit;
       font-size: 1rem;
@@ -47,16 +49,16 @@ class ContactForm extends LitElement {
 
     input::placeholder,
     textarea::placeholder {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.4);
     }
 
     input:focus,
     textarea:focus,
     select:focus {
       outline: none;
-      border-color: #f9d423;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 0 10px rgba(249, 212, 35, 0.2);
+      border-color: #ff006e;
+      background: rgba(255, 0, 110, 0.1);
+      box-shadow: 0 0 15px rgba(255, 0, 110, 0.4), 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     textarea {
@@ -75,21 +77,22 @@ class ContactForm extends LitElement {
     }
 
     button {
-      background: linear-gradient(135deg, #f9d423 0%, #f7c722 100%);
-      color: #1a1a2e;
-      border: none;
+      background: linear-gradient(135deg, #ff006e 0%, #f72585 100%);
+      color: #fff;
+      border: 1px solid rgba(255, 0, 110, 0.5);
       padding: 1rem;
-      border-radius: 50px;
+      border-radius: 0px;
       font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(249, 212, 35, 0.3);
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.6), 0 10px 30px rgba(255, 0, 110, 0.3);
     }
 
     button:hover:not(:disabled) {
       transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(249, 212, 35, 0.4);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.8), 0 15px 40px rgba(255, 0, 110, 0.5);
+      border-color: rgba(255, 0, 110, 0.8);
     }
 
     button:disabled {
