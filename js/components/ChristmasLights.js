@@ -37,6 +37,8 @@ class ChristmasLights extends LitElement {
       justify-content: space-around;
       padding: 0 5%;
       width: 100%;
+      height: 100%;
+      align-items: flex-start;
     }
 
     .bulb {
