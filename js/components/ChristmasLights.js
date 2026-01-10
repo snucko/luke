@@ -209,13 +209,27 @@ class ChristmasLights extends LitElement {
 
   constructor() {
     super();
-    this.active = localStorage.getItem('christmasLightsActive') === 'true';
+    // Default to ON, but respect saved preference if it exists
+    const saved = localStorage.getItem('christmasLightsActive');
+    this.active = saved === null ? true : saved === 'true';
     this.colors = ['red', 'green', 'blue', 'yellow', 'purple', 'white'];
   }
 
   connectedCallback() {
     super.connectedCallback();
+    // Initialize display state
     if (!this.active) {
+      this.classList.add('hidden');
+    } else {
+      this.classList.remove('hidden');
+    }
+  }
+
+  firstUpdated() {
+    // Ensure visibility matches active state after render
+    if (this.active) {
+      this.classList.remove('hidden');
+    } else {
       this.classList.add('hidden');
     }
   }
