@@ -10,7 +10,7 @@ class ChristmasLights extends LitElement {
       right: 0;
       z-index: 50;
       pointer-events: none;
-      height: 120px;
+      height: 150px;
     }
 
     .lights-container {
@@ -21,11 +21,11 @@ class ChristmasLights extends LitElement {
 
     .string {
       position: absolute;
-      top: 60px;
+      top: 75px;
       left: 0;
       right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent 0%, rgba(139, 69, 19, 0.3) 50%, transparent 100%);
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, rgba(139, 69, 19, 0.5) 50%, transparent 100%);
     }
 
     .lights {
@@ -41,19 +41,19 @@ class ChristmasLights extends LitElement {
 
     .bulb {
       position: relative;
-      width: 16px;
-      height: 24px;
-      margin: 0 8px;
+      width: 24px;
+      height: 36px;
+      margin: 0 12px;
       pointer-events: none;
     }
 
     .bulb-glow {
       position: absolute;
-      bottom: 4px;
+      bottom: 6px;
       left: 50%;
       transform: translateX(-50%);
-      width: 12px;
-      height: 16px;
+      width: 18px;
+      height: 24px;
       border-radius: 50% 50% 45% 45%;
       opacity: 0.3;
       transition: opacity 0.15s ease;
