@@ -217,12 +217,7 @@ class ChristmasLights extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    // Initialize display state only if inactive
-    this.updateVisibility();
-  }
-
-  updated() {
-    // Sync visibility with active state
+    // Initialize display state
     this.updateVisibility();
   }
 
@@ -254,12 +249,8 @@ class ChristmasLights extends LitElement {
   toggle() {
     this.active = !this.active;
     localStorage.setItem('christmasLightsActive', this.active);
-    
-    if (this.active) {
-      this.classList.remove('hidden');
-    } else {
-      this.classList.add('hidden');
-    }
+    this.updateVisibility();
+    this.requestUpdate();
   }
 
   render() {
