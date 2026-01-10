@@ -35,6 +35,19 @@ class LukeHeader extends LitElement {
       letter-spacing: 1px;
     }
 
+    h1 a {
+      color: inherit;
+      text-decoration: none;
+      text-shadow: inherit;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    h1 a:hover {
+      color: inherit;
+      text-shadow: 0 0 15px rgba(255, 0, 110, 0.8), 0 0 30px rgba(255, 0, 110, 0.5);
+    }
+
     nav {
       display: flex;
       gap: 2rem;
@@ -97,7 +110,7 @@ class LukeHeader extends LitElement {
     return html`
       <header>
         <div class="header-content">
-          <h1>💡 Magic by Luke</h1>
+          <h1><a href="index.html">💡 Magic by Luke</a></h1>
           <nav>
             ${CONFIG.navigation.map(item => html`
               <a href="${item.href}">${item.text}</a>
