@@ -9,7 +9,7 @@ class ContactForm extends LitElement {
     }
 
     .form-container {
-      max-width: 600px;
+      max-width: 800px;
       margin: 2rem auto;
       background: rgba(255, 0, 110, 0.08);
       border: 2px solid rgba(255, 0, 110, 0.3);
@@ -69,7 +69,13 @@ class ContactForm extends LitElement {
     .form-group {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 3rem;
+    }
+
+    .form-group > div {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
     }
 
     .form-group.full {
