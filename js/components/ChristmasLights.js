@@ -169,7 +169,7 @@ class ChristmasLights extends LitElement {
       box-shadow: 0 0 30px rgba(0, 217, 255, 0.8), 0 10px 30px rgba(255, 0, 110, 0.3);
     }
 
-    :host(.hidden) {
+    :host:not([data-active]) {
       display: none;
     }
 
@@ -228,9 +228,9 @@ class ChristmasLights extends LitElement {
 
   updateVisibility() {
     if (this.active) {
-      this.classList.remove('hidden');
+      this.setAttribute('data-active', 'true');
     } else {
-      this.classList.add('hidden');
+      this.removeAttribute('data-active');
     }
   }
 
