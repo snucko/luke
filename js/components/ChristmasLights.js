@@ -10,132 +10,102 @@ class ChristmasLights extends LitElement {
       right: 0;
       z-index: 101;
       pointer-events: none;
-      height: 150px;
+      padding: 20px 0;
     }
 
-    .lights-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .string {
-      position: absolute;
-      top: 75px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent 0%, rgba(139, 69, 19, 0.5) 50%, transparent 100%);
+    :host:not([data-active]) {
+      display: none;
     }
 
     .lights {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      --color-1: 255, 249, 82;
+      --color-2: 0, 234, 255;
+      --color-3: 247, 0, 148;
       display: flex;
-      justify-content: space-around;
-      padding: 0 5%;
-      width: 100%;
-      height: 100%;
-      align-items: flex-start;
+      justify-content: center;
+      flex-flow: wrap;
+      gap: 30px 40px;
+      overflow: hidden;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .bulb {
+    .lights li {
+      flex: none;
       position: relative;
-      width: 24px;
-      height: 36px;
-      margin: 0 12px;
-      pointer-events: none;
+      width: 20px;
+      height: 40px;
+      border-radius: 50%;
     }
 
-    .bulb-glow {
+    .lights li:before {
       position: absolute;
-      bottom: 6px;
+      content: '';
+      top: -5px;
       left: 50%;
       transform: translateX(-50%);
-      width: 18px;
-      height: 24px;
-      border-radius: 50% 50% 45% 45%;
-      opacity: 0.6;
-      transition: opacity 0.15s ease;
+      width: 12px;
+      height: 12px;
+      background-color: #222;
+      border-radius: 100%;
     }
 
-    .bulb-base {
+    .lights li:after {
       position: absolute;
-      bottom: 0;
+      content: '';
+      z-index: -1;
+      top: -2px;
       left: 50%;
-      transform: translateX(-50%);
-      width: 6px;
-      height: 4px;
-      background: #666;
-      border-radius: 2px;
+      width: 54px;
+      height: 5px;
+      border-bottom: 2px solid #333;
+      border-radius: 100%;
     }
 
-    /* Color variations */
-    .bulb.red .bulb-glow {
-      background: #ff1744;
-      box-shadow: 0 0 10px rgba(255, 23, 68, 0.3);
+    .lights li:last-child:after {
+      display: none;
     }
 
-    .bulb.green .bulb-glow {
-      background: #00e676;
-      box-shadow: 0 0 10px rgba(0, 230, 118, 0.3);
+    .lights li {
+      background-color: rgba(var(--color-1), 1);
+      box-shadow: 0 5px 24px 3px rgba(var(--color-1), 0.8);
+      animation: lighting-1 1.25s infinite linear;
     }
 
-    .bulb.blue .bulb-glow {
-      background: #2979f3;
-      box-shadow: 0 0 10px rgba(41, 121, 243, 0.3);
+    @keyframes lighting-1 {
+      50% {
+        background-color: rgba(var(--color-1), 0.25);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-1), 0.25);
+      }
     }
 
-    .bulb.yellow .bulb-glow {
-      background: #ffeb3b;
-      box-shadow: 0 0 10px rgba(255, 235, 59, 0.3);
+    .lights li:nth-child(odd) {
+      background-color: rgba(var(--color-2), 1);
+      box-shadow: 0 5px 24px 3px rgba(var(--color-2), 0.8);
+      animation: lighting-2 1.5s infinite linear;
     }
 
-    .bulb.purple .bulb-glow {
-      background: #d946ef;
-      box-shadow: 0 0 10px rgba(217, 70, 239, 0.3);
+    @keyframes lighting-2 {
+      50% {
+        background-color: rgba(var(--color-2), 0.4);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-2), 0.3);
+      }
     }
 
-    .bulb.white .bulb-glow {
-      background: #ffffff;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    .lights li:nth-child(4n + 2) {
+      background-color: rgba(var(--color-3), 1);
+      box-shadow: 0 5px 24px 3px rgba(var(--color-3), 1);
+      animation: lighting-3 1.5s infinite linear;
+      animation-delay: 1.25s;
     }
 
-    /* Flicker animations */
-    @keyframes flicker1 {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
+    @keyframes lighting-3 {
+      50% {
+        background-color: rgba(var(--color-3), 0.25);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-3), 0.25);
+      }
     }
-
-    @keyframes flicker2 {
-      0%, 100% { opacity: 0.5; }
-      40% { opacity: 0.9; }
-      60% { opacity: 1; }
-    }
-
-    @keyframes flicker3 {
-      0%, 100% { opacity: 0.6; }
-      30% { opacity: 1; }
-      70% { opacity: 0.5; }
-    }
-
-    .bulb:nth-child(1) .bulb-glow { animation: flicker1 1.2s ease-in-out infinite; }
-    .bulb:nth-child(2) .bulb-glow { animation: flicker2 1.4s ease-in-out infinite 0.2s; }
-    .bulb:nth-child(3) .bulb-glow { animation: flicker3 1.1s ease-in-out infinite 0.4s; }
-    .bulb:nth-child(4) .bulb-glow { animation: flicker1 1.3s ease-in-out infinite 0.1s; }
-    .bulb:nth-child(5) .bulb-glow { animation: flicker2 1.5s ease-in-out infinite 0.3s; }
-    .bulb:nth-child(6) .bulb-glow { animation: flicker3 1.2s ease-in-out infinite 0.5s; }
-    .bulb:nth-child(7) .bulb-glow { animation: flicker1 1.4s ease-in-out infinite 0.2s; }
-    .bulb:nth-child(8) .bulb-glow { animation: flicker2 1.1s ease-in-out infinite 0.4s; }
-    .bulb:nth-child(9) .bulb-glow { animation: flicker3 1.3s ease-in-out infinite 0.1s; }
-    .bulb:nth-child(10) .bulb-glow { animation: flicker1 1.5s ease-in-out infinite 0.3s; }
-    .bulb:nth-child(11) .bulb-glow { animation: flicker2 1.2s ease-in-out infinite 0.5s; }
-    .bulb:nth-child(12) .bulb-glow { animation: flicker3 1.4s ease-in-out infinite 0.2s; }
-    .bulb:nth-child(13) .bulb-glow { animation: flicker1 1.1s ease-in-out infinite 0.4s; }
-    .bulb:nth-child(14) .bulb-glow { animation: flicker2 1.3s ease-in-out infinite 0.1s; }
-    .bulb:nth-child(15) .bulb-glow { animation: flicker3 1.5s ease-in-out infinite 0.3s; }
 
     .toggle-button {
       position: fixed;
@@ -169,28 +139,18 @@ class ChristmasLights extends LitElement {
       box-shadow: 0 0 30px rgba(0, 217, 255, 0.8), 0 10px 30px rgba(255, 0, 110, 0.3);
     }
 
-    :host:not([data-active]) {
-      display: none;
-    }
-
     @media (max-width: 768px) {
       :host {
-        height: 100px;
+        padding: 15px 0;
       }
 
       .lights {
-        padding: 0 3%;
+        gap: 20px 30px;
       }
 
-      .bulb {
-        width: 12px;
-        height: 18px;
-        margin: 0 4px;
-      }
-
-      .bulb-glow {
-        width: 10px;
-        height: 14px;
+      .lights li {
+        width: 15px;
+        height: 30px;
       }
 
       .toggle-button {
@@ -209,15 +169,12 @@ class ChristmasLights extends LitElement {
 
   constructor() {
     super();
-    // Default to ON, but respect saved preference if it exists
     const saved = localStorage.getItem('christmasLightsActive');
     this.active = saved === null ? true : saved === 'true';
-    this.colors = ['red', 'green', 'blue', 'yellow', 'purple', 'white'];
   }
 
   connectedCallback() {
     super.connectedCallback();
-    // Initialize display state
     this.updateVisibility();
   }
 
@@ -229,23 +186,6 @@ class ChristmasLights extends LitElement {
     }
   }
 
-  getRandomColor() {
-    return this.colors[Math.floor(Math.random() * this.colors.length)];
-  }
-
-  generateBulbs() {
-    const bulbs = [];
-    for (let i = 0; i < 15; i++) {
-      bulbs.push(html`
-        <div class="bulb ${this.getRandomColor()}">
-          <div class="bulb-glow"></div>
-          <div class="bulb-base"></div>
-        </div>
-      `);
-    }
-    return bulbs;
-  }
-
   toggle() {
     this.active = !this.active;
     localStorage.setItem('christmasLightsActive', this.active);
@@ -253,14 +193,19 @@ class ChristmasLights extends LitElement {
     this.requestUpdate();
   }
 
+  generateBulbs() {
+    const bulbs = [];
+    for (let i = 0; i < 30; i++) {
+      bulbs.push(html`<li></li>`);
+    }
+    return bulbs;
+  }
+
   render() {
     return html`
-      <div class="lights-container">
-        <div class="string"></div>
-        <div class="lights">
-          ${this.generateBulbs()}
-        </div>
-      </div>
+      <ul class="lights">
+        ${this.generateBulbs()}
+      </ul>
 
       <button 
         class="toggle-button ${this.active ? 'active' : ''}"
