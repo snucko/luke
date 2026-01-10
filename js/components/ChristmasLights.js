@@ -217,16 +217,16 @@ class ChristmasLights extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    // Initialize display state
-    if (!this.active) {
-      this.classList.add('hidden');
-    } else {
-      this.classList.remove('hidden');
-    }
+    // Initialize display state only if inactive
+    this.updateVisibility();
   }
 
-  firstUpdated() {
-    // Ensure visibility matches active state after render
+  updated() {
+    // Sync visibility with active state
+    this.updateVisibility();
+  }
+
+  updateVisibility() {
     if (this.active) {
       this.classList.remove('hidden');
     } else {
