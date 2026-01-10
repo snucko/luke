@@ -55,7 +55,7 @@ class ChristmasLights extends LitElement {
       width: 18px;
       height: 24px;
       border-radius: 50% 50% 45% 45%;
-      opacity: 0.3;
+      opacity: 0.6;
       transition: opacity 0.15s ease;
     }
 
@@ -103,20 +103,20 @@ class ChristmasLights extends LitElement {
 
     /* Flicker animations */
     @keyframes flicker1 {
-      0%, 100% { opacity: 0.3; }
+      0%, 100% { opacity: 0.6; }
       50% { opacity: 1; }
     }
 
     @keyframes flicker2 {
-      0%, 100% { opacity: 0.2; }
-      40% { opacity: 0.8; }
+      0%, 100% { opacity: 0.5; }
+      40% { opacity: 0.9; }
       60% { opacity: 1; }
     }
 
     @keyframes flicker3 {
-      0%, 100% { opacity: 0.3; }
+      0%, 100% { opacity: 0.6; }
       30% { opacity: 1; }
-      70% { opacity: 0.4; }
+      70% { opacity: 0.5; }
     }
 
     .bulb:nth-child(1) .bulb-glow { animation: flicker1 1.2s ease-in-out infinite; }
