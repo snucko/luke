@@ -334,6 +334,25 @@ p {
   margin: 0;
 }
 
+.tiktok-profile {
+  display: block;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  border: 0;
+  background: #fff;
+}
+
+.tiktok-videos {
+  grid-template-columns: repeat(auto-fit, 325px);
+  justify-content: center;
+}
+
+.tiktok-videos iframe {
+  max-width: 100%;
+  border: 0;
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {

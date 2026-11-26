@@ -20,36 +20,23 @@
     </section>
 
     <section class="gallery-content">
-      <h2>Recent Performances</h2>
-      <div class="video-gallery">
-        <div class="video-item">
-          <div class="video-placeholder">
-            <span>📺</span>
-            <p>Performance Video</p>
-          </div>
-          <p class="video-caption">Corporate Event Magic</p>
-        </div>
-        <div class="video-item">
-          <div class="video-placeholder">
-            <span>📺</span>
-            <p>Performance Video</p>
-          </div>
-          <p class="video-caption">Birthday Party Entertainment</p>
-        </div>
-        <div class="video-item">
-          <div class="video-placeholder">
-            <span>📺</span>
-            <p>Performance Video</p>
-          </div>
-          <p class="video-caption">Wedding Reception Magic</p>
-        </div>
-        <div class="video-item">
-          <div class="video-placeholder">
-            <span>📺</span>
-            <p>Performance Video</p>
-          </div>
-          <p class="video-caption">Audience Favorite Tricks</p>
-        </div>
+      <!-- TikTok's embed.js is broken for US visitors (its library 404s and Chrome blocks it),
+           so these use TikTok's iframes directly. -->
+      <h2>Latest on TikTok</h2>
+      <!-- TikTok's creator embed: always shows Luke's newest videos, nothing to update here. -->
+      <iframe class="tiktok-profile" src="https://www.tiktok.com/embed/@cequity"
+              title="Luke's latest TikTok videos" height="480"
+              allow="encrypted-media; fullscreen" loading="lazy"></iframe>
+
+      <h2>Featured</h2>
+      <!-- Videos that play on the page. Add one by copying an iframe and changing the ID. -->
+      <div class="video-gallery tiktok-videos">
+        <iframe src="https://www.tiktok.com/player/v1/7561588816000175415?music_info=1&amp;description=1"
+                title="Luke on TikTok" width="325" height="578"
+                allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.tiktok.com/player/v1/7550841538868202807?music_info=1&amp;description=1"
+                title="Luke on TikTok" width="325" height="578"
+                allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
 
       <div class="cta-section" style="margin-top: 3rem;">
